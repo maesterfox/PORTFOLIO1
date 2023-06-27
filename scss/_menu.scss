@@ -120,14 +120,15 @@
         padding: 1rem 0;
         font-weight: 300;
         color: set-text-color($primary-color);
-        text-decoration: none;
+        text-shadow: 0 0 5px $secondary-color, 0 0 15px $secondary-color;
         @include easeout;
 
         &:hover {
             color: $secondary-color;
+            text-shadow: 0 0 5px $secondary-color, 0 0 25px $secondary-color,  0 0 50px $secondary-color};
         }
     }
-}
+
 
 //Delay each Nav Item slide
 @for $x from 1 through 4 {

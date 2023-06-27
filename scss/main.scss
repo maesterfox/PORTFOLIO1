@@ -156,6 +156,36 @@ main {
         }
     }
 
+    // Contact Page
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        div {
+            font-size: 1.5rem;
+            border: 2px $secondary-color solid;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 5px $secondary-color, 0 0 15px $secondary-color;
+            opacity: 0.8;
+            border-radius: 8px;
+            overflow: hidden;
+            @include easeout;
+
+            &:hover {
+                background: darken($primary-color, 30);
+                color: ($tertiary-color);
+                box-shadow: 0 0 5px $secondary-color, 0 0 25px $secondary-color;
+                transform: scale(1.3);
+                opacity: 1.0;
+                z-index: 1;
+            }
+        }
+    }
+
     // Botton Styles
     .btn {
         display: block;
