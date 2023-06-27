@@ -186,7 +186,7 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(4, 1fr); }
   .projects img {
     display: block;
     width: 100%;
@@ -233,10 +233,16 @@ main {
   color: #fff;
   height: 60px; }
 
+@media screen and (max-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .menu-branding .portrait {
     width: 300px;
-    height: 300px; } }
+    height: 300px; }
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -245,6 +251,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+    main .projects {
+      grid-template-columns: repeat(2, 1fr); }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -272,6 +280,8 @@ main {
       height: 50vh; } }
 
 @media screen and (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr; }
   main#home h1 {
     margin-top: 10vh; }
   ul.menu-nav,
