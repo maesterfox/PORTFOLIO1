@@ -3,18 +3,35 @@ $secondary-color: #ff9831;
 $tertiary-color: #6cf5ff;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.4;
+
+
+
+@keyframes fadeIn { 
+    0%    { opacity: 0; }
+  20%   { opacity: 1; }
+  80%   { opacity: 0; }
+  100%  { opacity: 1; }
+  }
 
 @mixin easeout {
     transition: all 0.5s ease-out;
 }
+
+@mixin glow {
+    &:hover {
+        background: $tertiary-color;
+        z-index: 1;
+        color: set-text-color($secondary-color);
+        box-shadow: 0 0 5px $tertiary-color, 0 0 25px $tertiary-color,  0 0 50px $tertiary-color}
+}
+    
 
 @mixin background {
     @if $show-home-image {
         &#bg-img {
             background: $home-image;
             background-attachment: fixed;
-            background-size: cover;
+            background-size: cover;         
 
             &after {
                 position: absolute;
