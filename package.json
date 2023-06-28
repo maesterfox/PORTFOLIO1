@@ -16,7 +16,10 @@
   "author": "David Fox",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^5.0.0",
     "node-sass": "^9.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "ws": "3.3.2"
   }
 }
