@@ -148,7 +148,6 @@ main {
 
         img:hover { 
             opacity: 1.0;
-            scale: 1.4;
             @include easeout;
         }
         
