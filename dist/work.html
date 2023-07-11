@@ -131,7 +131,14 @@
         Copyright &copy; 2023
     </footer>
 
-    <script type="text/javascript" src="js/main.js"></script>
-    
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script> <!-- Relative path to the vanilla-tilt.js file -->
+  <script type="text/javascript">
+    // JavaScript code to initialize VanillaTilt
+    VanillaTilt.init(document.querySelectorAll(".item"), {
+      max: 25,
+      speed: 400,  
+    });
+
+    </script>    
 </body>
 </html>
