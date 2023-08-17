@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.5s ease-out; }
+  transition: all 0.3s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 0.5s ease-out; }
+    transition: all 0.3s ease-out; }
   .menu-btn.close {
     transform: rotate(90deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -43,13 +43,13 @@
     background: #010105;
     list-style: none;
     transform: translate3d(0, -100% 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background-color: #04041b;
     transform: translate3d(0, 100%, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -59,14 +59,15 @@
       background-position: center;
       background-size: contain;
       border-radius: 50%;
-      border: solid 3px #ff9831; }
+      border: solid 3px #6cf5ff;
+      box-shadow: 0px 0px 15px white; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.3s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #ff9831; }
+      color: #6cf5ff; }
   .menu .nav-link {
     display: inline block;
     position: relative;
@@ -74,13 +75,13 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
-    text-shadow: 0 0 5px #ff9831, 0 0 15px #ff9831;
-    transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 15px white;
+    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
     .menu .nav-link:hover {
-      color: #ff9831;
-      text-shadow: 0 0 5px #ff9831, 0 0 25px #ff9831, 0 0 50px #ff9831; }
+      color: #6cf5ff;
+      text-shadow: 0 0 5px white, 0 0 25px; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -105,17 +106,18 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background-image: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
-    body#bg-imgafter {
+    background-size: cover;
+    opacity: 0.9; }
+    body#bg-img::after {
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: rgba(4, 4, 27, 0.8); }
+      background: #04041b; }
 
 h1,
 h2,
@@ -125,13 +127,14 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 6rem;
+    text-shadow: 0px 0px 4px; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(5, 5, 36, 0.5); }
+    text-shadow: 0px 0px 4px; }
 
 a {
   color: #ffffff;
@@ -154,7 +157,7 @@ main {
     padding: 0.4rem; }
     main a:hover {
       color: #ff9831;
-      transition: all 0.5s ease-out; }
+      transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -242,7 +245,7 @@ main {
     opacity: 0.8;
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.5s ease-out; }
+    transition: all 0.3s ease-out; }
     .boxes div:hover {
       background: black;
       color: #6cf5ff;
