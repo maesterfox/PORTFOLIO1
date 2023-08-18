@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,700&display=swap");
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -59,9 +60,10 @@
       background-position: center;
       background-size: contain;
       border-radius: 50%;
-      border: solid 3px #6cf5ff;
-      box-shadow: 0px 0px 15px white; }
+      border: solid 1px #6cf5ff;
+      box-shadow: 0px 0px 5px white, 0px 0px 5px #6cf5ff, 0px 0px 15px white, 0px 0px 15px #6cf5ff; }
   .menu .nav-item {
+    margin: 10px;
     transform: translate3d(600px, 0, 0);
     transition: all 0.3s ease-out; }
     .menu .nav-item.show {
@@ -103,7 +105,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background-image: url(../img/background.jpg);
@@ -127,7 +129,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
     text-shadow: 0px 0px 4px; }
   h1.sm-heading,
   h2.sm-heading,
@@ -146,22 +148,23 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #ff9831; }
+  color: #f9ae63; }
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 60px);
+  padding: 10%; }
   main .icons {
     margin-top: 1rem; }
   main a {
     padding: 0.4rem; }
     main a:hover {
-      color: #ff9831;
+      color: #f9ae63;
       transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 15vh; }
 
 .about-info {
   display: grid;
@@ -204,7 +207,7 @@ main {
 .job {
   background: #070731;
   padding: 0.5rem;
-  border-radius: #ff9831 2px solid;
+  border-radius: #f9ae63 2px solid;
   box-shadow: 0 0 5px #6cf5ff, 0 0 15px #6cf5ff; }
 
 .projects {
@@ -223,7 +226,6 @@ main {
   transition: ease-out 0.3s; }
   .projects img:hover {
     transform: scale(1.2);
-    z-index: 1;
     box-shadow: 0 0 5px #6cf5ff, 0 0 25px #6cf5ff, 0 0 50px #6cf5ff; }
   .projects img:hover ~ img {
     filter: blur(4px);
@@ -232,27 +234,64 @@ main {
 
 .boxes {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 1rem; }
+  align-items: left;
+  margin-top: 4rem;
+  width: 40%; }
   .boxes div {
     font-size: 1.5rem;
-    border: 2px #ff9831 solid;
+    border: 1px #f9ae63 solid;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 0 5px #ff9831, 0 0 15px #ff9831;
+    box-shadow: 0 0 5px #f9ae63, 0 0 15px #f9ae63;
     opacity: 0.8;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease-out; }
     .boxes div:hover {
       background: black;
+      text-shadow: 0 0 2px white, 0 0 3px #6cf5ff;
       color: #6cf5ff;
-      box-shadow: 0 0 5px #ff9831, 0 0 25px #ff9831;
-      transform: scale(1.3);
+      box-shadow: 0 0 5px #f9ae63, 0 0 25px #f9ae63;
+      transform: scale(1.1);
       opacity: 1.0;
       z-index: 2; }
+  .boxes .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden; }
+  .boxes .overlay.show {
+    opacity: 1;
+    visibility: visible; }
+  .boxes .email-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s forwards;
+    opacity: 0; }
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -200%); }
+  to {
+    transform: translate(-50%, -50%); } }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -298,7 +337,10 @@ main {
     text-align: center; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 3rem; }
+    main .sm-heading {
+      font-size: 1.2rem; }
     main .projects {
       grid-template-columns: repeat(2, 1fr); }
   ul.menu-nav,

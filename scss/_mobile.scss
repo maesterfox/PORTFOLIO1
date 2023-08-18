@@ -36,11 +36,17 @@
         .lg-heading {
             line-height: 1;
             margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+
+        .sm-heading {
+            font-size: 1.2rem;
         }
 
         .projects {
             grid-template-columns: repeat(2, 1fr);
         }
+        
       
     }
 
