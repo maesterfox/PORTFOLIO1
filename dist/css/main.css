@@ -107,19 +107,6 @@ body {
   margin: 0;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   line-height: 1.5; }
-  body#bg-img {
-    background-image: url(../img/background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    opacity: 0.9; }
-    body#bg-img::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background: #04041b; }
 
 h1,
 h2,
@@ -239,11 +226,13 @@ main {
   justify-content: center;
   align-items: left;
   margin-top: 4rem;
-  width: 40%; }
+  width: 600px; }
   .boxes div {
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
     border: 1px #f9ae63 solid;
-    padding: 1.5rem;
+    padding: 1.2rem;
     margin-bottom: 2rem;
     box-shadow: 0 0 5px #f9ae63, 0 0 15px #f9ae63;
     opacity: 0.8;
@@ -252,46 +241,12 @@ main {
     transition: all 0.3s ease-out; }
     .boxes div:hover {
       background: black;
-      text-shadow: 0 0 2px white, 0 0 3px #6cf5ff;
+      text-shadow: 0 0 1px white, 0 0 2px #6cf5ff;
       color: #6cf5ff;
       box-shadow: 0 0 5px #f9ae63, 0 0 25px #f9ae63;
       transform: scale(1.1);
       opacity: 1.0;
       z-index: 2; }
-  .boxes .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    transition: opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    visibility: hidden; }
-  .boxes .overlay.show {
-    opacity: 1;
-    visibility: visible; }
-  .boxes .email-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 70%;
-    max-width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.5s forwards;
-    opacity: 0; }
-
-@keyframes slideIn {
-  from {
-    transform: translate(-50%, -200%); }
-  to {
-    transform: translate(-50%, -50%); } }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -320,29 +275,26 @@ main {
   color: #fff;
   height: 60px; }
 
-@media screen and (max-width: 1171px) {
+@media screen and (max-width: 1200px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .menu-branding .portrait {
     width: 300px;
-    height: 300git remotepx; }
+    height: 300px; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
-      font-size: 3rem; }
-    main .sm-heading {
-      font-size: 1.2rem; }
-    main .projects {
-      grid-template-columns: repeat(2, 1fr); }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: 4rem; }
+  main .sm-heading {
+    font-size: 1.4rem; }
+  main .projects {
+    grid-template-columns: repeat(2, 1fr); }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -359,6 +311,8 @@ main {
     height: 35vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
+      margin-top: 20px;
+      margin-bottom: 20px;
       width: 250px;
       height: 250px; }
   .about-info {
@@ -369,11 +323,24 @@ main {
       width: 50vh;
       height: 50vh; } }
 
-@media screen and (max-width: 500px) {
-  .projects {
-    grid-template-columns: 1fr; }
-  main#home h1 {
-    margin-top: 10vh; }
+@media screen and (max-width: 767px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    main .lg-heading {
+      align-self: center;
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 3rem; }
+    main .sm-heading {
+      font-size: 1.2rem;
+      align-self: center; }
+    main .projects {
+      grid-template-columns: repeat(2, 1fr); }
+    main .boxes div {
+      width: 350px;
+      font-size: 18px; }
   ul.menu-nav,
   div.menu-branding {
     float: none;

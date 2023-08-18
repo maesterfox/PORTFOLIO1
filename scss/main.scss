@@ -8,7 +8,6 @@
 }
 
 body {
-  @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
@@ -175,12 +174,15 @@ main {
   justify-content: center;
   align-items: left;
   margin-top: 4rem;
-  width: 40%;
+  width: 600px;
+  //border: 1px solid white;
 
   div {
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
     border: 1px $secondary-color solid;
-    padding: 1.5rem;
+    padding: 1.2rem;
     margin-bottom: 2rem;
     box-shadow: 0 0 5px $secondary-color, 0 0 15px $secondary-color;
     opacity: 0.8;
@@ -190,7 +192,7 @@ main {
 
     &:hover {
       background: darken($primary-color, 10);
-      text-shadow: 0 0 2px $quarternary-color, 0 0 3px $tertiary-color;
+      text-shadow: 0 0 1px $quarternary-color, 0 0 2px $tertiary-color;
       color: $tertiary-color;
       box-shadow: 0 0 5px $secondary-color, 0 0 25px $secondary-color;
       transform: scale(1.1);
@@ -199,48 +201,7 @@ main {
     }
   }
 
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    transition: opacity 0.5s, visibility 0.5s;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .overlay.show {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .email-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 70%;
-    max-width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.5s forwards;
-    opacity: 0;
-  }
-  
-  @keyframes slideIn {
-    from {
-      transform: translate(-50%, -200%);
-    }
-    to {
-      transform: translate(-50%, -50%);
-    }
-  }
+ 
 }
 
 // Button Styles
